@@ -18,5 +18,10 @@ namespace ProASP_Chapter2.Controllers
         {
             return View();
         }
+
+        public ViewResult RegisterForm2()
+        {
+            return View();
+        }
     }
 }
