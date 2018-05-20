@@ -1,4 +1,5 @@
-﻿
+﻿@model ProASP_Chapter2.Models.ResponseModel
+
 @{
     Layout = null;
 }
@@ -11,7 +12,21 @@
     <title>RegisterForm</title>
 </head>
 <body>
-    <div> 
-    </div>
+    @using (Html.BeginForm())
+    {
+        <p>Name: @Html.TextBoxFor(x => x.Name) </p>
+        <p>Email: @Html.TextBoxFor(x => x.Email) </p>
+        <p>Phone: @Html.TextBoxFor(x => x.Phone) </p>
+        <p>
+            Will You Go: @Html.DropDownListFor(x => x.WillYou, new[]
+            { new SelectListItem() {Text = "Yes", Value = bool.TrueString },
+            new SelectListItem() {Text = "No", Value = bool.FalseString}
+            }, "Decide yourself")
+        </p>
+
+        <input type="submit" value="SendForm" />
+
+    }
+
 </body>
 </html>
