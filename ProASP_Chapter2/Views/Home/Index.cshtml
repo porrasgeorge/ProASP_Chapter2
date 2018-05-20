@@ -8,14 +8,25 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <title>Index</title>
+    <style>
+        .btn a {color: white; text-decoration: none}
+        body {background-color: #F1F1F1; }
+    </style>
 </head>
 <body>
-    <div>
+    <div class=" text-center">
         <p>We are going to have a party</p>
         <p>@ViewBag.hour:@ViewBag.minute.@ViewBag.secs</p>
-        <p>@Html.ActionLink("Register", "RegisterForm")</p>
-        <p>@Html.ActionLink("Register2", "RegisterForm2")</p>
+        <div class="btn btn-danger">
+            @Html.ActionLink("Register", "RegisterForm")
+        </div>
+        
+        <div class="btn btn-success">
+            @Html.ActionLink("Register2", "RegisterForm2")
+        </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,29 @@
+﻿@model ProASP_Chapter2.Models.ResponseModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ThankYou</title>
+</head>
+<body>
+    <div> 
+        <p>Gracias @Model.Name</p>
+
+        @if (Model.WillYou == true)
+        {
+            @:Great
+        }
+        else
+        {
+            @:Sorry to hear that
+        }
+
+    </div>
+</body>
+</html>

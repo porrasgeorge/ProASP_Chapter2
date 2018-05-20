@@ -27,7 +27,15 @@ namespace ProASP_Chapter2.Controllers
         [HttpPost]
         public ViewResult RegisterForm(ResponseModel rm)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                return View("ThankYou", rm);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
         public ViewResult RegisterForm2()
