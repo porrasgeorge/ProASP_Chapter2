@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ProASP_Chapter2.Models;
 
 namespace ProASP_Chapter2.Controllers
 {
@@ -11,10 +12,20 @@ namespace ProASP_Chapter2.Controllers
         // GET: Home
         public ViewResult Index()
         {
+            ViewBag.hour = DateTime.Now.Hour;
+            ViewBag.minute = DateTime.Now.Minute;
+            ViewBag.secs = DateTime.Now.Second;
             return View();
         }
 
+        [HttpGet]
         public ViewResult RegisterForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RegisterForm(ResponseModel rm)
         {
             return View();
         }
